@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Attribute Directives</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <p [ngClass]="{
+          red: highlightColor === 'red',
+          'green-color': highlightColor === 'green',
+          'blue': highlightColor === 'blue'
+        }">Click any button to highlight me</p>
+      </div>
+      <div class="col-md-12">
+        <button class="btn btn-danger" (click)="highlight('red')">Red</button>
+        <button class="btn btn-success" (click)="highlight('green')">Green</button>
+        <button class="btn btn-primary" (click)="highlight('blue')">Blue</button>
+      </div>
+    </div>
+  </div>
