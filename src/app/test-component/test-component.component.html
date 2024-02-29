@@ -1,1 +1,16 @@
-<p>This is the new component</p>
+<div>
+    <h1>Data Binding</h1>
+    <h2>String Interpolation</h2>
+    <span>My name is {{ firstName }}</span>
+
+    <h2>Property Binding</h2>
+    <img [src]="imagepath" alt="">
+
+    <h2>Event Binding</h2>
+    <input type="text" (input)="passValueToComponent($event)">
+
+    <h2>Two Way Binding</h2>
+    <input type="text" [(ngModel)]="defaultValue">
+    <span>{{ defaultValue }}</span>
+</div>
+

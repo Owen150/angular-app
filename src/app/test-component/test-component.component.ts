@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./test-component.component.css']
 })
 export class TestComponentComponent {
+  firstName = 'Michael';
+  imagepath = 'assets/doom.jpg';
+  defaultValue = 'Wednesday';
 
+  passValueToComponent(e: any) {
+    console.log(e.target.value);
+  }
 }
