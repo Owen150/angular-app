@@ -7,8 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AttributeDirectivesComponent {
   highlightColor = 'white';
-  
+  isStyleApplied = false;
+
   highlight(color:string) {
     this.highlightColor = color;
+  }
+
+  toggleStyle() {
+    this.isStyleApplied = !this.isStyleApplied;
   }
 }
