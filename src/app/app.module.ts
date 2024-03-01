@@ -7,6 +7,8 @@ import { StructuralDirectivesComponent } from './structural-directives/structura
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { AttributeDirectivesComponent } from './attribute-directives/attribute-d
     ParentComponent,
     ChildComponent,
     TestComponentComponent,
-    StructuralDirectivesComponent
+    StructuralDirectivesComponent,
+    FirstComponent,
+    SecondComponent
   ],
   imports: [
     BrowserModule,
