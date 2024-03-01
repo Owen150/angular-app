@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
   shopNameInParent = "";
+
+  msgFromChild = "";
+
+  receiveMessage(msg:any) {
+    this.msgFromChild = msg;
+  }
 }
