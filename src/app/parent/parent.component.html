@@ -1,0 +1,10 @@
+<div>
+  <!-- Passing Data from Parent to child -->
+  <h1>Parent Component</h1>
+  <input type="text" [(ngModel)]="shopNameInParent" />
+  <p>{{msgFromChild}}</p>
+</div>
+<app-child
+  [myShop]="shopNameInParent"
+  (sendMessageEmitter)="receiveMessage($event)"
+></app-child>

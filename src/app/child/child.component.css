@@ -1,0 +1,11 @@
+div{
+    background-color: #d9f6ff;
+    color: blue;
+    min-height: 300px;
+    padding: 20px;
+}
+
+p{
+    font-style: 24px;
+    font-weight: bold;
+}
