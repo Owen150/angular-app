@@ -9,6 +9,10 @@ import { ChildComponent } from './child/child.component';
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
+import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
+import { HomeComponent } from './home/home.component';
+import { ReactiveComponent } from './reactive/reactive.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +23,15 @@ import { SecondComponent } from './second/second.component';
     TestComponentComponent,
     StructuralDirectivesComponent,
     FirstComponent,
-    SecondComponent
+    SecondComponent,
+    TemplateDrivenFormsComponent,
+    HomeComponent,
+    ReactiveComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
