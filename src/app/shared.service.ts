@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class SharedService {
 
+  firstPageValue = 0;
+
   constructor() { }
 
   calculate(firstNum:number, secondNum:number) {
