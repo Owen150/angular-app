@@ -33,7 +33,7 @@
           <small
             *ngIf="
               emailAddress.errors &&
-              emailAddress.errors &&
+              emailAddress.errors.required &&
               emailAddress.touched
             "
             >Email Address is required. </small
@@ -41,7 +41,7 @@
           <small
             *ngIf="
               emailAddress.errors &&
-              emailAddress.errors &&
+              emailAddress.errors.email &&
               emailAddress.touched
             "
             >Email Address should be valid. </small

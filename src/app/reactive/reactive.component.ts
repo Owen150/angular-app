@@ -24,8 +24,14 @@ export class ReactiveComponent implements OnInit {
   }
 
   accept() {
-    this.myForm.setValue({
+  /*  this.myForm.setValue({
+      uname: 'Michael Owen',
+      email:null,
       readTerms: true,
     });
+  */
+    this.myForm.patchValue({
+      readTerms: true
+    })
   }
 }

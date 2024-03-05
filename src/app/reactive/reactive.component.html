@@ -25,11 +25,11 @@
           id="emailAddress"
         />
         <small
-          *ngIf="myForm.get('email')?.errors && myForm.get('email')?.touched"
-          >Email Address is required. </small
-        >
+          *ngIf="myForm.get('email')?.errors && myForm.get('email')?.errors?.['required'] && myForm.get('email')?.touched"
+          >Email Address is required.
+        </small>
         <small
-          *ngIf="myForm.get('email')?.errors && myForm.get('email')?.touched"
+          *ngIf="myForm.get('email')?.errors && myForm.get('email')?.errors?.email && myForm.get('email')?.touched"
           >Email Address should be valid</small
         >
       </div>
