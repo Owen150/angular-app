@@ -9,6 +9,10 @@ import { ChildComponent } from './child/child.component';
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpApiComponent } from './http-api/http-api.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { InitialsPipe } from './initials.pipe';
 
 @NgModule({
   declarations: [
@@ -19,11 +23,15 @@ import { SecondComponent } from './second/second.component';
     TestComponentComponent,
     StructuralDirectivesComponent,
     FirstComponent,
-    SecondComponent
+    SecondComponent,
+    HttpApiComponent,
+    PipesComponent,
+    InitialsPipe
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
