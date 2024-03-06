@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpApiComponent } from './http-api/http-api.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { InitialsPipe } from './initials.pipe';
+import { PostListComponent } from './post-list/post-list.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { InitialsPipe } from './initials.pipe';
     SecondComponent,
     HttpApiComponent,
     PipesComponent,
-    InitialsPipe
+    InitialsPipe,
+    PostListComponent
   ],
   imports: [
     BrowserModule,
