@@ -1,0 +1,18 @@
+<ul>
+  <li *ngFor="let item of items">
+    <strong>{{ item.name }}</strong
+    >: {{ item.description }}
+  </li>
+</ul>
+
+<form #itemForm="ngForm" class="d-flex flex-column" (ngSubmit)="onSubmit()">
+  <label for="itemName">Item Name</label>
+  <input type="text" id="itemName" name="name" ngModel required />
+
+  <label for="itemDescription">Item Description</label>
+  <input type="text" id="itemDescription" name="description" ngModel required />
+
+  <div class="btn-container d-inline text-center my-2">
+    <button type="submit" [disabled]="!itemForm.valid">Add Item</button>
+  </div>
+</form>

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-app';
+
+  items: any[] = [];
+
+  onItemAdded(newItem: any) {
+    this.items.push(newItem);
+  }
 }

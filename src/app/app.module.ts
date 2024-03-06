@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { ParentComponent } from './parent/parent.component';
@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpApiComponent } from './http-api/http-api.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { InitialsPipe } from './initials.pipe';
-import { PostListComponent } from './post-list/post-list.component';
+import { ItemFormComponent } from './item-form/item-form.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +28,13 @@ import { PostListComponent } from './post-list/post-list.component';
     HttpApiComponent,
     PipesComponent,
     InitialsPipe,
-    PostListComponent
+    ItemFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

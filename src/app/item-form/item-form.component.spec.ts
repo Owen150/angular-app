@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostListComponent } from './post-list.component';
+import { ItemFormComponent } from './item-form.component';
 
-describe('PostListComponent', () => {
-  let component: PostListComponent;
-  let fixture: ComponentFixture<PostListComponent>;
+describe('ItemFormComponent', () => {
+  let component: ItemFormComponent;
+  let fixture: ComponentFixture<ItemFormComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PostListComponent]
+      declarations: [ItemFormComponent]
     });
-    fixture = TestBed.createComponent(PostListComponent);
+    fixture = TestBed.createComponent(ItemFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
