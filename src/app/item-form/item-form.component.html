@@ -7,7 +7,7 @@
 
 <form #itemForm="ngForm" class="d-flex flex-column" (ngSubmit)="onSubmit()">
   <label for="itemName">Item Name</label>
-  <input type="text" id="itemName" name="name" ngModel required />
+  <input type="text" id="itemName" name="name" ngModel required minlength="3" maxlength="12"/>
 
   <label for="itemDescription">Item Description</label>
   <input type="text" id="itemDescription" name="description" ngModel required />
