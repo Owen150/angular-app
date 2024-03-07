@@ -1,31 +1,6 @@
 {
   "items": [
     {
-      "id": "c1a2",
-      "name": "Nairobi",
-      "description": "Alert Message"
-    },
-    {
-      "id": "f38d",
-      "name": "Nairobi",
-      "description": "Alert Message"
-    },
-    {
-      "id": "be41",
-      "name": "Michael Owen Oduor",
-      "description": "Alert Message"
-    },
-    {
-      "id": "9518",
-      "name": "Michael hhh",
-      "description": "Alert Message"
-    },
-    {
-      "id": "ac21",
-      "name": "Michael hhh",
-      "description": "Alert Message"
-    },
-    {
       "id": "fe8a",
       "name": "Michael",
       "description": "Alert Message"
@@ -61,44 +36,28 @@
       "description": "In in neque unde off"
     },
     {
-      "id": "a574",
-      "name": "",
-      "description": ""
-    },
-    {
-      "id": "da42"
-    },
-    {
-      "id": "a0d4",
-      "name": "",
-      "description": ""
-    },
-    {
-      "id": "cf85"
-    },
-    {
-      "id": "45f9"
-    },
-    {
-      "id": "e78b",
-      "name": "",
-      "description": ""
-    },
-    {
-      "id": "d96c"
-    },
-    {
-      "id": "a437",
-      "name": "",
-      "description": ""
-    },
-    {
-      "id": "a82f"
-    },
-    {
       "id": "dd30",
       "name": "Naivasha",
       "description": "In in neque unde off"
+    },
+    {
+      "id": "a737",
+      "name": "Michael Owen",
+      "description": "Alert Message"
+    },
+    {
+      "id": "920b"
+    },
+    {
+      "id": "0b8b"
+    },
+    {
+      "id": "c40e"
+    },
+    {
+      "id": "1d47",
+      "name": "Pwambua",
+      "description": "Activity Two"
     }
   ]
 }
