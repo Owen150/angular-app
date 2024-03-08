@@ -9,7 +9,6 @@ import { Employee } from '../employee';
   styleUrls: ['./create-employee.component.css'],
 })
 export class CreateEmployeeComponent implements OnInit {
-
   // Initialize a new Employee Object from the Employee Model
   employee: Employee = new Employee();
 
@@ -17,19 +16,21 @@ export class CreateEmployeeComponent implements OnInit {
   constructor(
     private employeeService: EmployeeService,
     private router: Router
-  ) { }
+  ) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   // On Submitting the Create Employee Form - Log the Employee Data then proceed to save it.
-  onSubmit(myForm:any) {
-    console.log(this.employee);
-    this.saveEmployee();
+  onSubmit(myForm: any) {
+    if (myForm.valid) {
+      console.log(this.employee);
+      this.saveEmployee();
+    }
   }
 
   // After Successfully Saving the Employee, Navigate to the Employee List Component
   saveEmployee() {
-    this.employeeService.createEmployee(this.employee).subscribe(data => {
+    this.employeeService.createEmployee(this.employee).subscribe((data) => {
       console.log(data);
       this.goToEmployeeList();
     });
@@ -39,5 +40,4 @@ export class CreateEmployeeComponent implements OnInit {
   goToEmployeeList() {
     this.router.navigate(['/employees']);
   }
-
 }

@@ -29,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     CreateEmployeeComponent,
     UpdateEmployeeComponent,
     EmployeeDetailsComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
   ],
   imports: [
     BrowserModule,

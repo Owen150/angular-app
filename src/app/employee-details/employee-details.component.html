@@ -1,15 +1,18 @@
 <h3>Employee Details</h3>
-<br />
-<div>
-  <div>
-    <label> <b> First Name: </b></label> {{ employee.firstName }}
-  </div>
-  <br />
-  <div>
-    <label> <b> Last Name: </b></label> {{ employee.lastName }}
-  </div>
-  <br />
-  <div>
-    <label> <b> Email Id: </b></label> {{ employee.emailId }}
-  </div>
-</div>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ employee.firstName }}</td>
+      <td>{{ employee.lastName }}</td>
+      <td>{{ employee.emailId }}</td>
+    </tr>
+  </tbody>
+</table>

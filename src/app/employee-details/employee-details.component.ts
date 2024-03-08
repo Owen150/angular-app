@@ -3,6 +3,9 @@ import { Employee } from '../employee';
 import { ActivatedRoute } from '@angular/router';
 import { EmployeeService } from '../employee.service';
 
+import { inject, Input } from '@angular/core';
+
+
 @Component({
   selector: 'app-employee-details',
   templateUrl: './employee-details.component.html',
