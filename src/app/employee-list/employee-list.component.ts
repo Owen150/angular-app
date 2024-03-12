@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee';
 import { EmployeeService } from '../employee.service';
 import { Router } from '@angular/router';
+import { EmployeeDetailsComponent } from '../employee-details/employee-details.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { DeleteConfirmationComponent } from '../delete-confirmation/delete-confirmation.component';
+import { UpdateEmployeeComponent } from '../update-employee/update-employee.component';
 
 @Component({
   selector: 'app-employee-list',
@@ -11,7 +15,19 @@ import { Router } from '@angular/router';
 export class EmployeeListComponent implements OnInit {
   employees!: Employee[];
 
-  constructor(private employeeService: EmployeeService,  private router: Router) {}
+  id!: number;
+  // The Number of Items Per Page
+  pageSize = 3;
+  //The Current Page
+  page = 1;
+  //The Number of Items in your Paginated Collection
+  collectionSize: number = 0;
+
+  constructor(
+    private employeeService: EmployeeService,
+    private router: Router,
+    private modal: NgbModal
+  ) {}
 
   ngOnInit(): void {
     this.getEmployees();
@@ -19,26 +35,73 @@ export class EmployeeListComponent implements OnInit {
 
   // Getting Data from an Observable - Subscribe
   private getEmployees() {
-    this.employeeService.getEmployeesList().subscribe(data => {
-      this.employees = data;
+    this.employeeService.getEmployeesList().subscribe((data) => {
+      // return (this.employees = data);
+      this.collectionSize = data.length;
+      this.employees = data.slice(
+        (this.page - 1) * this.pageSize,
+        this.page * this.pageSize
+      );
     });
   }
 
-  // Navigate to Employee Details Component
-  employeeDetails(id: number){
-    this.router.navigate(['employee-details', id]);
+  // Show Employee Details Modal
+  employeeDetails(id: number) {
+    this.employeeService.getEmployeeById(id).subscribe((data) => {
+      const modalRef = this.modal.open(EmployeeDetailsComponent, {
+        size: 'sm',
+      });
+      modalRef.componentInstance.employeeDetails = data;
+    });
   }
 
   // Navigate to Update Employee Component
-  updateEmployee(id: number){
-    this.router.navigate(['update-employee', id]);
+  updateEmployee(id: any) {
+    console.log(id);
+    this.employeeService.getEmployeeById(id).subscribe((data) => {
+      const modalRef = this.modal.open(UpdateEmployeeComponent, {
+        size: 'lg',
+      });
+      modalRef.componentInstance.employeeDetails = data;
+    });
   }
 
-  // Delete Employee - No Component Exists therefore perform action directly
-  deleteEmployee(id: number){
-    this.employeeService.deleteEmployee(id).subscribe( data => {
+  // Delete Employee Functinality
+  deleteEmployee(id: number) {
+    this.employeeService.deleteEmployee(id).subscribe((data) => {
+      const modalRef = this.modal.open(DeleteConfirmationComponent, {
+        size: 'lg',
+      });
+      modalRef.componentInstance.employeeDetails = data;
+    });
+  }
+
+  // Initialize a new Employee Object from the Employee Model
+  employee: Employee = new Employee();
+
+  // On Submitting the Create Employee Form - Log the Employee Data then proceed to save it.
+  onSubmit(myForm: any) {
+    if (myForm.valid) {
+      console.log(this.employee);
+      this.saveEmployee();
+    }
+  }
+  // After Successfully Saving the Employee, Navigate to the Employee List Component
+  saveEmployee() {
+    this.employeeService.createEmployee(this.employee).subscribe((data) => {
       console.log(data);
-      this.getEmployees();
-    })
+      this.goToEmployeeList();
+    });
+  }
+
+  // Employee List Component View
+  goToEmployeeList() {
+    this.router.navigate(['/employees']);
+  }
+
+  //NgbPagination Module
+  onPageChange(event: number) {
+    this.page = event;
+    this.getEmployees();
   }
 }

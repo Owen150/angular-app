@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { EmployeeService } from '../employee.service';
 import { Employee } from '../employee';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-update-employee',
   templateUrl: './update-employee.component.html',
   styleUrls: ['./update-employee.component.css']
 })
-export class UpdateEmployeeComponent implements OnInit {
+export class UpdateEmployeeComponent  {
 
+  @Input() employeeDetails!: any;
+
+ myForm!:NgForm
   id!: number;
   employee: Employee = new Employee();
 
@@ -18,16 +22,16 @@ export class UpdateEmployeeComponent implements OnInit {
     private router: Router) { }
 
   // On Form Initialization, display Individual Employee Data using the Employee ID
-  ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+  // ngOnInit(): void {
+  //   this.id = this.route.snapshot.params['id'];
 
-    this.employeeService.getEmployeeById(this.id).subscribe(data => {
-      this.employee = data;
-    }, error => console.log(error));
-  }
+  //   this.employeeService.getEmployeeById(this.id).subscribe(data => {
+  //     this.employee = data;
+  //   }, error => console.log(error));
+  // }
 
-  onSubmit(){
-    this.employeeService.updateEmployee(this.id, this.employee).subscribe( data =>{
+  onSubmit(myForm: NgForm) {
+    this.employeeService.updateEmployee(this.employeeDetails.id, myForm.value).subscribe( data =>{
       this.goToEmployeeList();
     }
     , error => console.log(error));

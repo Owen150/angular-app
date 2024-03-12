@@ -25,13 +25,14 @@ export class EmployeeService {
   }
 
   // Get Employee by ID
-  getEmployeeById(id: number): Observable<Employee>{
-    return this.httpClient.get<Employee>(`${this.baseURL}/${id}`);
+  getEmployeeById(id: any){
+    // return this.httpClient.get<Employee>(`${this.baseURL}/${id}`);
+    return this.httpClient.get(`${this.baseURL}/${id}`);
   }
 
   // Update Individual Employee - By ID
-  updateEmployee(id: number, employee: Employee): Observable<Object>{
-    return this.httpClient.put(`${this.baseURL}/${id}`, employee);
+  updateEmployee(id: any, employee: Employee){
+    return this.httpClient.patch(`${this.baseURL}/${id}`, employee);
   }
 
   // Delete Individual Employee - By ID

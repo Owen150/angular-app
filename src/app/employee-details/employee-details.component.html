@@ -1,18 +1,31 @@
-<h3>Employee Details</h3>
-
-<table class="table table-striped table-bordered table-hover">
-  <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email Address</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ employee.firstName }}</td>
-      <td>{{ employee.lastName }}</td>
-      <td>{{ employee.emailId }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="modal-header">
+  <h4 class="modal-title">
+    Employee Details For {{ employeeDetails?.firstName }} {{ employeeDetails?.lastName }}
+  </h4>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  ></button>
+</div>
+<div class="modal-body container">
+  <div class="row p-2">
+    <div class="col">
+      <p>
+        First Name: {{ employeeDetails?.firstName }} <br />
+        Last Name: {{ employeeDetails?.lastName }}<br />
+        Email Address: {{ employeeDetails?.emailId }}
+      </p>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="activeModal.close('Close click')"
+    >
+      Close
+    </button>
+  </div>
+</div>
