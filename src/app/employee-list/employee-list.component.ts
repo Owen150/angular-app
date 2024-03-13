@@ -6,6 +6,7 @@ import { EmployeeDetailsComponent } from '../employee-details/employee-details.c
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DeleteConfirmationComponent } from '../delete-confirmation/delete-confirmation.component';
 import { UpdateEmployeeComponent } from '../update-employee/update-employee.component';
+import { CreateEmployeeComponent } from '../create-employee/create-employee.component';
 
 @Component({
   selector: 'app-employee-list',
@@ -14,6 +15,8 @@ import { UpdateEmployeeComponent } from '../update-employee/update-employee.comp
 })
 export class EmployeeListComponent implements OnInit {
   employees!: Employee[];
+  isFormVisible: boolean = false;
+  selectedEmployee!: Employee;
 
   id!: number;
   // The Number of Items Per Page
@@ -55,14 +58,29 @@ export class EmployeeListComponent implements OnInit {
     });
   }
 
+  showForm(employee: Employee) {
+    this.selectedEmployee = employee;
+    this.isFormVisible = true;
+  }
+
+  hideForm() {
+    this.isFormVisible = false;
+    this.selectedEmployee = this.employee;
+  }
+
+  handleFormSubmission() {
+    this.hideForm();
+    this.getEmployees(); // Reload employee list after form submission
+  }
+
   // Navigate to Update Employee Component
   updateEmployee(id: any) {
-    console.log(id);
     this.employeeService.getEmployeeById(id).subscribe((data) => {
-      const modalRef = this.modal.open(UpdateEmployeeComponent, {
+      const modalRef = this.modal.open(CreateEmployeeComponent, {
         size: 'lg',
       });
       modalRef.componentInstance.employeeDetails = data;
+      modalRef.componentInstance.updateMode = true;
     });
   }
 

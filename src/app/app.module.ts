@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { ParentComponent } from './parent/parent.component';
@@ -34,7 +34,14 @@ import { DeleteConfirmationComponent } from './delete-confirmation/delete-confir
     EmployeeListComponent,
     DeleteConfirmationComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, NgbPaginationModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgbPaginationModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
