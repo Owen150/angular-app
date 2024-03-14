@@ -14,17 +14,17 @@ export class EmployeeService {
   // Communicate with the Server via the HTTP protocol
   constructor(private httpClient: HttpClient) {}
 
-  // Get All Employees
+  // Get All Employees - Returns the response body in JSON format
   getEmployeesList(): Observable<Employee[]> {
     return this.httpClient.get<Employee[]>(`${this.baseURL}`);
   }
 
-  // Add Employee
+  // Add a new Employee from an Employee Object
   createEmployee(employee: Employee): Observable<Object> {
     return this.httpClient.post(`${this.baseURL}`, employee);
   }
 
-  // Get Employee by ID
+  // Get Employee by his/her respective ID
   getEmployeeById(id: any) {
     // return this.httpClient.get<Employee>(`${this.baseURL}/${id}`);
     return this.httpClient.get(`${this.baseURL}/${id}`);
@@ -36,7 +36,7 @@ export class EmployeeService {
   }
 
   // Delete Individual Employee - By ID
-  deleteEmployee(id: number): Observable<Object> {
+  deleteEmployee(id: any): Observable<Object> {
     return this.httpClient.delete(`${this.baseURL}/${id}`);
   }
 }

@@ -1,6 +1,7 @@
 <div class="modal-header">
   <h4 class="modal-title">
-    Employee Details For {{ employeeDetails?.firstName }} {{ employeeDetails?.lastName }}
+    Employee Details For {{ employeeDetails?.firstName }}
+    {{ employeeDetails?.lastName }}
   </h4>
   <button
     type="button"
@@ -12,7 +13,7 @@
 <div class="modal-body container">
   <div class="row p-2">
     <div class="col">
-      <p>
+      <p style="font-size: medium">
         First Name: {{ employeeDetails?.firstName }} <br />
         Last Name: {{ employeeDetails?.lastName }}<br />
         Email Address: {{ employeeDetails?.emailId }}

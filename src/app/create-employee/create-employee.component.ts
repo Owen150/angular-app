@@ -10,12 +10,16 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./create-employee.component.css'],
 })
 export class CreateEmployeeComponent implements OnInit {
+  //Employee Data from the employee list component as the input
+  @Input() employeeDetails!: any;
+
   // Initialize a new Employee Object from the Employee Model
   employee: Employee = new Employee();
-  @Input() employeeDetails!: any;
+
+  //Set updateMode to false as we are creating and not updating an employee
   updateMode: boolean = false;
 
-  // Inject the Employee Service, the Router, and the active modal
+  // Inject the Employee Service, the Router, and the active modal in the constructor
   constructor(
     private employeeService: EmployeeService,
     private router: Router,

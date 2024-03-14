@@ -12,22 +12,8 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./employee-details.component.css'],
 })
 export class EmployeeDetailsComponent {
-  constructor(public activeModal: NgbActiveModal){}
+  // Output from the employee list component thus the input decorator
   @Input() employeeDetails!: any;
-  // employee!: Employee;
 
-  // constructor(
-  //   private route: ActivatedRoute,
-  //   private employeService: EmployeeService
-  // ) {}
-
-  // // On Component Initialization Show Employee Details by Passing the Employee ID as a parameter
-  // ngOnInit(): void {
-  //   this.id = this.route.snapshot.params['id'];
-  //   this.employee = new Employee();
-
-  //   this.employeService.getEmployeeById(this.id).subscribe((data) => {
-  //     this.employee = data;
-  //   });
-  // }
+  constructor(public activeModal: NgbActiveModal) { }
 }
