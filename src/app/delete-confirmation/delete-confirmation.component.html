@@ -1,3 +1,4 @@
+<!-- Delete Modal -->
 <div class="modal-header">
   <h4 class="modal-title">Confirm Delete</h4>
   <button
@@ -6,11 +7,13 @@
     aria-label="Close"
     (click)="activeModal.dismiss('Cross click')"
   >
-    <span aria-hidden="true">&times;</span>
+    <span style="text-align: right" class="m-3" aria-hidden="false"
+      >&times;</span
+    >
   </button>
 </div>
 <div class="modal-body">
-  <p>
+  <p class="alert alert-warning">
     Are you sure you want to delete the employee details for
     {{ employeeDetails.firstName }} {{ employeeDetails.lastName }}
   </p>
@@ -23,7 +26,7 @@
   >
     Cancel
   </button>
-  <button type="button" class="btn btn-danger" (click)="confirmDelete()">
+  <button type="button" class="btn btn-danger" (click)="confirmDelete(id)">
     Delete
   </button>
 </div>

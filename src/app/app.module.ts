@@ -32,7 +32,7 @@ import { DeleteConfirmationComponent } from './delete-confirmation/delete-confir
     UpdateEmployeeComponent,
     EmployeeDetailsComponent,
     EmployeeListComponent,
-    DeleteConfirmationComponent,
+    DeleteConfirmationComponent
   ],
   imports: [
     BrowserModule,

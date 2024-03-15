@@ -9,11 +9,12 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 export class DeleteConfirmationComponent {
   // Employee Data or Input from the employee list component
   @Input() employeeDetails!: any;
+  id!: any
 
   constructor(public activeModal: NgbActiveModal) { }
   
-  confirmDelete() {
-    console.log(`Item "${this.employeeDetails}" deleted`);
+  confirmDelete(id: any) {
+    console.log(`Item "${this.employeeDetails.id}" deleted`);
     this.activeModal.close('Delete confirmed');
   }
 }

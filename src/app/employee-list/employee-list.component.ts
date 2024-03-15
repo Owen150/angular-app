@@ -70,7 +70,7 @@ export class EmployeeListComponent implements OnInit {
   }
 
   // Delete Employee Details functionality
-  deleteEmployee(id: number) {
+  deleteEmployee(id: any) {
     this.employeeService.deleteEmployee(id).subscribe((data) => {
       const modalRef = this.modal.open(DeleteConfirmationComponent, {
         size: 'lg',
