@@ -10,7 +10,7 @@ export class DeleteConfirmationComponent {
   // Employee Data or Input from the employee list component
   @Input() employeeDetails!: any;
   id!: any
-
+  
   constructor(public activeModal: NgbActiveModal) { }
   
   confirmDelete(id: any) {
