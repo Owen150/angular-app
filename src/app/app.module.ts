@@ -14,6 +14,10 @@ import { HttpApiComponent } from './http-api/http-api.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { InitialsPipe } from './initials.pipe';
 import { ItemFormComponent } from './item-form/item-form.component';
+import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
+import { HomeComponent } from './home/home.component';
+import { ReactiveComponent } from './reactive/reactive.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -29,11 +33,15 @@ import { ItemFormComponent } from './item-form/item-form.component';
     PipesComponent,
     InitialsPipe,
     ItemFormComponent
+    TemplateDrivenFormsComponent,
+    HomeComponent,
+    ReactiveComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    AppRoutingModule,
     ReactiveFormsModule
   ],
   providers: [],
