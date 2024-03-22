@@ -17,6 +17,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { DeleteConfirmationComponent } from './delete-confirmation/delete-confirmation.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpApiComponent } from './http-api/http-api.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { InitialsPipe } from './initials.pipe';
+import { ItemFormComponent } from './item-form/item-form.component';
+import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
+import { HomeComponent } from './home/home.component';
+import { ReactiveComponent } from './reactive/reactive.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +42,13 @@ import { DeleteConfirmationComponent } from './delete-confirmation/delete-confir
     EmployeeDetailsComponent,
     EmployeeListComponent,
     DeleteConfirmationComponent
+    HttpApiComponent,
+    PipesComponent,
+    InitialsPipe,
+    ItemFormComponent
+    TemplateDrivenFormsComponent,
+    HomeComponent,
+    ReactiveComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +56,8 @@ import { DeleteConfirmationComponent } from './delete-confirmation/delete-confir
     AppRoutingModule,
     HttpClientModule,
     NgbPaginationModule,
+    HttpClientModule,
+    AppRoutingModule,
     ReactiveFormsModule
   ],
   providers: [],
