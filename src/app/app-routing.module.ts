@@ -9,12 +9,10 @@ import { TemplateDrivenFormsComponent } from './template-driven-forms/template-d
 import { HomeComponent } from './home/home.component';
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { ParentComponent } from './parent/parent.component';
-import { FirstComponent } from './first/first.component';
 import { HttpApiComponent } from './http-api/http-api.component';
 import { ItemFormComponent } from './item-form/item-form.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
-import { TemplateReferenceVariablesComponent } from './template-reference-variables/template-reference-variables.component';
 import { TestComponentComponent } from './test-component/test-component.component';
 
 const routes: Routes = [
@@ -27,7 +25,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'employees', pathMatch: 'full' },
   { path: 'template-driven', component: TemplateDrivenFormsComponent },
   { path: 'model-driven', component: ReactiveComponent },
-  { path: 'directives', component: AttributeDirectivesComponent },
+  { path: 'attribute-directives', component: AttributeDirectivesComponent },
   { path: 'parent', component: ParentComponent },
   { path: 'http', component: HttpApiComponent },
   { path: 'item', component: ItemFormComponent },

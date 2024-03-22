@@ -10,12 +10,4 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
-
-  goToTemplateDriven() {
-    this.router.navigate(['template-driven']);
-  }
-
-  goToModelDriven() {
-    this.router.navigate(['model-driven']);
-  }
 }

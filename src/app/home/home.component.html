@@ -1,19 +1,55 @@
 <div class="container">
-    <div class="row heading">
-      <div class="col-md-12">Angular Forms</div>
-    </div>
-    <div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="nav-item" (click)="goToTemplateDriven()">
-            Template Driven Approach
-          </div>
-        </div>
-        <div class="col-md-12">
-          <div class="nav-item" (click)="goToModelDriven()">
-            Model Driven Approach (Reactive Form)
-          </div>
+  <div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="nav-item" routerLink="/employees">
+          Employees
         </div>
       </div>
+      <div class="col-md-12">
+        <div class="nav-item" routerLink="/template-driven">
+          Template Driven Forms
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="nav-item" routerLink="/model-driven">
+          Model Driven Forms (Reactive Form)
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="nav-item" routerLink="/parent">
+          Parent-Child Communication
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="nav-item" routerLink="/http">
+          HTTP Communication
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="nav-item" routerLink="/structural">
+          Structural Directives
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="nav-item" routerLink="/attribute-directives">
+          Attribute Directives
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="nav-item" routerLink="/item">
+          Item Form
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="nav-item" routerLink="/pipes">
+          Pipes
+        </div>
+      </div>
+      <!-- Add more nav-items for other components -->
     </div>
   </div>
+
+  <!-- Router Outlet to display routed components -->
+  <router-outlet></router-outlet>
+</div>
