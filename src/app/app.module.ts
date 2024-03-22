@@ -9,6 +9,14 @@ import { ChildComponent } from './child/child.component';
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { DeleteConfirmationComponent } from './delete-confirmation/delete-confirmation.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpApiComponent } from './http-api/http-api.component';
 import { PipesComponent } from './pipes/pipes.component';
@@ -29,6 +37,11 @@ import { AppRoutingModule } from './app-routing.module';
     StructuralDirectivesComponent,
     FirstComponent,
     SecondComponent,
+    CreateEmployeeComponent,
+    UpdateEmployeeComponent,
+    EmployeeDetailsComponent,
+    EmployeeListComponent,
+    DeleteConfirmationComponent
     HttpApiComponent,
     PipesComponent,
     InitialsPipe,
@@ -40,11 +53,14 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgbPaginationModule,
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

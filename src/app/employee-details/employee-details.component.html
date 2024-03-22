@@ -1,0 +1,32 @@
+<div class="modal-header">
+  <h4 class="modal-title">
+    Employee Details For {{ employeeDetails?.firstName }}
+    {{ employeeDetails?.lastName }}
+  </h4>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  ></button>
+</div>
+<div class="modal-body container">
+  <div class="row p-2">
+    <div class="col">
+      <p style="font-size: medium">
+        First Name: {{ employeeDetails?.firstName }} <br />
+        Last Name: {{ employeeDetails?.lastName }}<br />
+        Email Address: {{ employeeDetails?.emailId }}
+      </p>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-warning btn-outline-dark"
+      (click)="activeModal.close('Close click')"
+    >
+      Close
+    </button>
+  </div>
+</div>
