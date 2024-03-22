@@ -29,8 +29,20 @@
       "firstName": "Daria",
       "lastName": "Wheeler",
       "emailId": "zivawuvaw@mailinator.com"
+    },
+    {
+      "id": "e868",
+      "firstName": "Chase",
+      "lastName": "Campos",
+      "emailId": "cojogab@mailinator.com"
+    },
+    {
+      "id": "cd71",
+      "firstName": "Mutagah",
+      "lastName": "Branch",
+      "emailId": "fybi@mailinator.com"
     }
-    ]
+  ],
   "items": [
     {
       "id": "fe8a",
@@ -89,6 +101,11 @@
     {
       "id": "1d47",
       "name": "Pwambua",
+      "description": "Activity Two"
+    },
+    {
+      "id": "5d32",
+      "name": "Product One",
       "description": "Activity Two"
     }
   ]
