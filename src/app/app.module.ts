@@ -14,7 +14,6 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { DeleteConfirmationComponent } from './delete-confirmation/delete-confirmation.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,7 +24,6 @@ import { ItemFormComponent } from './item-form/item-form.component';
 import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 import { HomeComponent } from './home/home.component';
 import { ReactiveComponent } from './reactive/reactive.component';
-import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -41,11 +39,11 @@ import { AppRoutingModule } from './app-routing.module';
     UpdateEmployeeComponent,
     EmployeeDetailsComponent,
     EmployeeListComponent,
-    DeleteConfirmationComponent
+    DeleteConfirmationComponent,
     HttpApiComponent,
     PipesComponent,
     InitialsPipe,
-    ItemFormComponent
+    ItemFormComponent,
     TemplateDrivenFormsComponent,
     HomeComponent,
     ReactiveComponent

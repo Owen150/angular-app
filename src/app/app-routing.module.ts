@@ -4,6 +4,9 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { HomeComponent } from './home/home.component';
+import { ReactiveComponent } from './reactive/reactive.component';
+import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 
 const routes: Routes = [
   { path: 'employee-details/:id', component: EmployeeDetailsComponent },
@@ -11,40 +14,10 @@ const routes: Routes = [
   { path: 'employees', component: EmployeeListComponent },
   { path: 'create-employee', component: CreateEmployeeComponent },
   { path: '', redirectTo: 'employees', pathMatch: 'full' },
-];
-
-@NgModule({ 
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}
-import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ReactiveComponent } from './reactive/reactive.component';
-import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
-
-
-const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-  },
-  {
-    path: 'home',
-    component: HomeComponent,
-  },
-  {
-    path: 'template-driven',
-    component: TemplateDrivenFormsComponent,
-  },
-  {
-    path: 'model-driven',
-    component: ReactiveComponent,
-  },
-  {
-    path: '**',
-    component: HomeComponent,
-  },
+  { path: 'home', component: HomeComponent},
+  { path: 'template-driven', component: TemplateDrivenFormsComponent},
+  { path: 'model-driven', component: ReactiveComponent},
+  { path: '**', component: HomeComponent},
 ];
 
 @NgModule({
